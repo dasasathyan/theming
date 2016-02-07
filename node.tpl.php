@@ -80,7 +80,9 @@
  * @ingroup themeable
  */
 ?>
-
+<?php if ($node->nid==1):?>
+  <h1>Hello World</h1>
+<?php else: ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print $user_picture; ?>
@@ -95,6 +97,7 @@
     <div class="submitted">
       <?php print $submitted; ?>
     </div>
+  <?php endif; ?>
   <?php endif; ?>
 
   <div class="content"<?php print $content_attributes; ?>>
