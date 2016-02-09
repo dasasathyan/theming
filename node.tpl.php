@@ -80,9 +80,13 @@
  * @ingroup themeable
  */
 ?>
-<?php if ($node->nid==1):?>
-  <h1>Hello World</h1>
-<?php else: ?>
+<?php
+if ($type=="machine_js"){
+  $node->title.= "dhhksdbaf";
+  node_save($node);
+}
+ ?>
+
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print $user_picture; ?>
@@ -98,7 +102,7 @@
       <?php print $submitted; ?>
     </div>
   <?php endif; ?>
-  <?php endif; ?>
+
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
